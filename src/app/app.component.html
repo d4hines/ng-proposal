@@ -1,18 +1,101 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <h3 class="navbar-brand">The Proposal App</h3>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#about">How this App works</a></li>The 
-          </ul>
-        </div><!--/.nav-collapse -->
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="navbar-brand">The Proposal App</span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a href="" data-toggle="modal" data-target="#how-modal">
+            <h4>How this App Works</h4>
+          </a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#reference-modal">
+            <h4>References</h4>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="https://angular.io/">
+            Powered By:
+            <img src="https://www.shareicon.net/download/2016/07/08/116973_development.ico" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/d4hines/ng-proposal">
+            See the Source on:
+            <span>&nbsp; &nbsp;</span>
+            <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png" alt="">
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- How it Works Modal -->
+<div class="modal fade" id="how-modal" tabindex="-1" role="dialog" aria-labelledby="how-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h3 class="modal-title" id="exampleModalLabel">How this App Works</h3>
       </div>
-    </nav>
+      <div class="modal-body">
+        <p class="lead">This page is a Web Application built on the Angular framework. When you first request to the load the page, none of the content below exists yet. Instead, a tiny but full-fledge application boots up that has enough brains to do everything it needs from a single page.</p>
+        <p class="lead"> Angular app is built of one or more, discrete components. This app happens to have three: one for loading the front page, one for retrieving the sections of the proposal, and one for displaying those sections. Each component does one and only one job; this strong seperation of concerns makes refactoring and extending the app easy.</p>
+        <p class="lead">
+          To replicate an API, the app queries a "database" (just a flat file for now) via HTTP to retrieve an arbitrary number of "section" objects. The data model is defined in such a way that each section has multiple pieces, and each piece can be of several types (header, list item, image, or paragraph). Using this data model and logic defined as part of the section-viewer component, the app renders each type of item differently to dynamically create the document you see below. This is simple templating and one-way data binding, but Angular supports powerful two-way data binding that makes sleek forms a breeze.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Back to the app</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- References Modal -->
+<div class="modal fade" id="reference-modal" tabindex="-1" role="dialog" aria-labelledby="reference-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h3 class="modal-title" id="exampleModalLabel">References</h3>
+      </div>
+      <div class="modal-body">
+        <ol>
+          <li> <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_60/60_Rule">The 60/60 Rule by David Wood</a>            </li>
+          <li>
+            <a href="https://trends.google.com/trends/explore?q=%2Fm%2F02_qnn,%2Fm%2F0j45p7w,%2Fm%2F012l1vxv">Google Trends for ASP.NET, Angular and React</a>
+          </li>
+          <li>
+            <a href="https://trends.google.com/trends/explore?q=ASP.NET%20Web%20Forms,%2Fm%2F0j45p7w,%2Fm%2F012l1vxv">Google Trends for ASP.NET Web Forms, Angular, and React</a>
+          </li>
+        </ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Back to the app</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <div *ngIf="welcomeState;then welcome else proposal">here is ignored</div>
 <div class="container">
   <ng-template #welcome>
