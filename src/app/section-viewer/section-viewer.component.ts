@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ISection } from './section';
+import { ISection } from '../section';
+import { SectionService } from '../section.service'
 
 @Component({
   selector: 'app-section-viewer',
@@ -8,19 +9,17 @@ import { ISection } from './section';
   styleUrls: ['./section-viewer.component.css']
 })
 export class SectionViewerComponent implements OnInit {
-  sections: ISection[] = [
-    {
-      title: 'My Section Header',
-      body: 'This section\'s body.'
-    },
-    {
-      title: 'My Other Section Header',
-      body: 'This section\'s body.'
-    }
-  ]
-  constructor() { }
+  sections: ISection[];
+
+  getSections() {
+    this.sectionService.getSections()
+      .subscribe(sections => this.sections = sections);
+  }
+
+  constructor(private sectionService: SectionService) { }
 
   ngOnInit() {
+    this.getSections();
   }
 
 }

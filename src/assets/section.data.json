@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Summary",
+    "body": [
+      {
+        "type": "text",
+        "content": "60% of the cost of software ownership is maintenance, as much as30% of maintenance is simply trying to understand what the other guy did. Ellucian built our Web Front End on ASP.NET Web Forms, a technology released in2002 that has since been succeeded several times over. Moreover, their work is essentially black-boxed to us. Our developer may be able to jerry-rig a process on top of Ellucians, but what about the next time? A patch over our patch? No, Regent needs software that is as responsive, dynamic, and flexible as we are. I propose:"
+      },
+      {
+        "type": "li",
+        "content": "We develop a completely new Single Page Application, with modern, open source software, in a way that is transparent and can be easily modified as our needs change and grow. "
+      },
+      {
+        "type": "li",
+        "content": "This application should use Angular by Google as its client-side Framework."
+      },
+      {
+        "type": "li",
+        "content": "Regent needs someone deep “in the weeds” on this project to fully understand what’s been done as well as where and how it can be extended in the future. That person should have an in-depth knowledge of our CRM, Angular and its tools, and Regent’s operational style and vision."
+      }
+    ]
+  },
+  {
+    "title": "The Problem",
+    "body": [
+      {
+        "type": "header",
+        "content": "Murky Software"
+      },
+      {
+        "type": "text",
+        "content": "There is a way of developing software that is what I’ll call “murky”. The intent of such development appears to be to make the engineering of the application so obfuscated, undocumented, and difficult to modify and extend that the user simply must depend on the vendors to make any changes other than the ones explicitly planned for. Ellucian is very good at this sort of development, and, you must admit, it’s worked as a business model. I’m not suggesting we only use Open Source Software; Dynamics CRM itself is proprietary. The difference is that Dynamics is transparent: through Microsoft’s easy-to-use API’s and extensive documentation, we are practically as unbounded as our creativity to extend on modify our system to our needs. This is not a convenience but an absolute necessity, as the technical challenges we face tomorrow likely don’t even exist today.  Whatever solution is developed for the WFE, if it’s not understood, well-documented, and extensible, then it’s not really a solution."
+      },
+      {
+        "type": "header",
+        "content": "Slow Software"
+      },
+      {
+        "type": "text",
+        "content": "I hardly must mention that the WFE’s age is showing. While some decorating with CSS will go a long way, ASP.NET Web Forms won’t deliver the responsiveness and sleekness that that our users are growing accustomed to through Facebook, Netflix, Gmail, etc. These are Single Page Applications (SPA’s), and they are where I believe the Web is going, and where I believe we should too."
+      }
+    ]
+  },
+  {
+    "title": "The Solution",
+    "body": [
+      {
+        "type": "header",
+        "content": "Develop Our Own Application"
+      },
+      {
+        "type": "text",
+        "content": "Development is difficult and expensive. However, development is on average a mere30% of the cost involved. Contracting to develop software that we don’t understand and can’t modify, then reverse-engineering that software to make it work for us is more difficult and more expensive. We’ve already contracted a Web Developer proficient in the cutting edge of web technology (Node + Angular,  ASP.NET MVC, etc.); why not leverage his skills to write us software that is modern, responsive, and most importantly, that we own, understand, and can extend?"
+      },
+      {
+        "type": "header",
+        "content": "Develop a Single Page Application"
+      },
+      {
+        "type": "text",
+        "content": "Notice that every submission in the WFE triggers a page refresh (where the new “spinner” receives unfortunate display). In contrast, an application like Gmail can navigate hundreds of emails without a single page refresh. Instead, they send you one page that can handle the viewing, entering, and validating of data in your browser, keeping communication between client and server to the very minimum necessary. Besides making for very responsive pages, this makes the entire system easier to develop and maintain, as the look, feel, and behavior of the web application is completely independent of the back-end server’s infrastructure. The back-end could change applications, architectures, or even operating systems with minimal effect, and vice versa. If the technicalities of the design are not convincing, just compare the sheer popularity, support and tooling of the two methodologies. Just for comparison, I searched Google Trends for activity on ASP.NET Web Forms in the last 5 years, and compared it to Angular and React, the two most popular Front End Frameworks for SPA’s. The results (below) are quite telling."
+      },
+      {
+        "type": "img",
+        "content": "../assets/trends.png"
+      },
+      {
+        "type": "text",
+        "content": "Popularity doesn’t say everything, but surely it must say something. There’s a reason the zeitgeist is moving towards these front-end frameworks: besides the technical advantages they’re created and backed by the internet giants Google and Facebook (Angular and React, respectively), who compete to provide the easiest learning curve, best tooling, and most responsive support communities the internet has ever seen. I’m not one to hastily jump on the bandwagon, but I happen to really like where this one is going, and it’s going there fast. Regent stays ahead of the curve, and we should stay ahead of this one. "
+      },
+      {
+        "type": "header",
+        "content": "Develop an Angular Application"
+      },
+      {
+        "type": "text",
+        "content": "There are many competing Front-End Frameworks that aim at accomplishing similar things: Angular, React + Redux, EmberJs, Vue, BackBone.JS, just to name a few. While it’s easy to despair in sheer decision fatigue, I whole heartedly recommend Angular as the framework of choice for this project. For one, our contractor is proficient in it.  To name a few others:"
+      },
+      {
+        "type": "li",
+        "content": "Angular is a complete package. It can handle almost every aspect of a web application without depending on other libraries."
+      },
+      {
+        "type": "li",
+        "content": "Angular uses the Model, View, View-Model paradigm, making Angular applications are wonderfully easy to create, understand, and extend."
+      },
+      {
+        "type": "li",
+        "content": "Angular is highly opinionated: Google experts have made most of the tough decisions for us and made it very easy to stay within best practices, so that developers don’t have to have a PhD in Algorithms to produce great solutions to business problems. Even better, Google has produced amazing tooling that provides rich IntelliSense and an awesome CLI (for example, most of this web app was produced with a single command on my laptop)."
+      },
+      {
+        "type": "header",
+        "content": "Regent Needs Someone \"In the Weeds\""
+      },
+      {
+        "type": "text",
+        "content": "No matter how much meticulous and masterful planning goes into development, no software is so perfect as to be timeless. I therefore strongly recommend that a Regent employee be “yoked” as it were to this project, reading every line of code and accompanying documentation, and maybe even contributing unit tests, etc. Involving Regent developers at this level will ensure that Regent is not at the mercy of any particular developer or vendor, but wholly owns the application. When the time comes to make modifications, we’ll know what’s possible because we can refer to the documentation that we wrote, extend code that we reviewed, run the unit tests that we wrote, and move forward with confidence. This person would of course need to be familiar with the Dynamics CRM API’s and our implementation of them, as well as modern JavaScript (ES6/TypeScript) and Angular and its typical tools (Webpack, Jasmine, Karma, etc.). Binding the project to Regent and not to the contractor will drastically reduce the difficulty and cost of maintenance, as well as leave open so many more doors for future improvement."
+      }
+    ]
+  },
+  {
+    "title": "Excellence, Innovation, and Integrity",
+    "body": [
+      {
+        "type": "text",
+        "content": "I rest my case, knowing these decisions are far above my head, and ask forgiveness if I’ve overstepped my bounds. My only apologia is that I firmly believe every aspect of Regent University should display excellence, innovation and integrity. I humbly submit that redesigning the WFE App as a modern SPA rather than patching the existing one could in a small but real way achieve that."
+      }
+    ]
+  }
+]

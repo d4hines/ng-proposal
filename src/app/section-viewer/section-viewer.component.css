@@ -1,3 +1,41 @@
+.page-title-container {
+  margin: 50px 20px 20px 20px;
+  border-radius: 20px 20px;
+}
+.page-title {
+  padding: 20px;
+  background-color: rgb(84,101,117);
+  box-shadow: 0 0 30px black;
+  font-size: 350%;
+}
 .section {
-  background-color: whitesmoke;
+  margin-bottom: 30px;
+}
+.section-header {
+  /*border: 3px solid white;*/
+  box-shadow: 0 0 30px black;
+  border-radius: 10px 10px 0px 0px;
+  background-color: rgb(72,85,99);
+  width: 100%;
+}
+.section-header h2 {
+  padding: 5px 10px 10px 10px;
+}
+.section-body h3 {
+  text-decoration: underline;
+}
+.section-body {
+  box-shadow: 0 0 30px black;
+  /*border: 2px solid white;*/
+  border-radius: 0px 0px 10px 10px; 
+  background-color: rgb(84,101,117);
+  padding: 30px;
+}
+.section-body li {
+  margin: 0% 5% 0% 5%;
+  font-size: 140%
+}
+.section-body img {
+  display:block;
+  margin: auto;
 }

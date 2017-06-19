@@ -13,7 +13,7 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  welcomeState = true;
+  welcomeState = false;
   state = 'active';
   heroes = [
     { name: 'bill', state: 'inactive' },
